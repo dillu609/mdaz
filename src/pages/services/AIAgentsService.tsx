@@ -145,7 +145,7 @@ const AIAgentsService = () => {
       <section className="py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-gray-900 mb-4">
+            <h2 className="text-4xl font-bold text-theme-primary mb-4">
               AI Agent Capabilities
             </h2>
             <p className="text-xl text-gray-600">
@@ -153,7 +153,7 @@ const AIAgentsService = () => {
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
             {features.map((feature, index) => (
               <div key={index} className="bg-white p-8 rounded-xl shadow-sm hover:shadow-md transition-shadow">
                 <div className="w-16 h-16 bg-purple-100 rounded-lg flex items-center justify-center mb-6">
@@ -181,12 +181,12 @@ const AIAgentsService = () => {
 
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
             {useCases.map((useCase, index) => (
-              <div key={index} className="bg-white p-8 rounded-xl shadow-sm">
+              <div key={index} className="bg-blue-600 p-8 shadow-sm rounded-tr-3xl">
                 <div className="w-16 h-16 bg-purple-100 rounded-lg flex items-center justify-center mb-6">
                   <useCase.icon className="w-8 h-8 text-purple-600" />
                 </div>
-                <h3 className="text-xl font-semibold text-gray-900 mb-4">{useCase.title}</h3>
-                <p className="text-gray-600 mb-6">{useCase.description}</p>
+                <h3 className="text-xl font-semibold text-white mb-4">{useCase.title}</h3>
+                <p className="text-white/80 mb-6">{useCase.description}</p>
                 <div className="bg-green-50 p-4 rounded-lg">
                   <p className="text-sm text-gray-600">Time Savings:</p>
                   <p className="text-2xl font-bold text-green-600">{useCase.timesSaved}</p>
@@ -207,13 +207,13 @@ const AIAgentsService = () => {
                   Featured Case Study
                 </span>
               </div>
-              <h2 className="text-3xl font-bold text-gray-900 mb-6">
+              <h2 className="text-3xl font-bold text-theme-primary mb-6">
                 Rodriguez Marketing: AI-Powered Client Onboarding
               </h2>
               
               <div className="space-y-6">
                 <div>
-                  <h3 className="text-lg font-semibold text-gray-900 mb-2">The Challenge:</h3>
+                  <h3 className="text-lg font-semibold text-theme-secondary mb-2">The Challenge:</h3>
                   <p className="text-gray-600">
                     Client onboarding was taking 3+ weeks with manual document collection, 
                     contract review, and project setup processes.
@@ -221,14 +221,14 @@ const AIAgentsService = () => {
                 </div>
 
                 <div>
-                  <h3 className="text-lg font-semibold text-gray-900 mb-2">AI Agent Solution:</h3>
+                  <h3 className="text-lg font-semibold text-theme-secondary mb-2">AI Agent Solution:</h3>
                   <p className="text-gray-600">
                     Intelligent onboarding agent that guides clients through document upload, 
                     automatically reviews contracts for completeness, and sets up projects based on service type.
                   </p>
                 </div>
 
-                <blockquote className="bg-purple-50 border-l-4 border-purple-600 p-6">
+                <blockquote className="bg-purple-50 border-l-4 border-purple-600 p-6 rounded-tr-lg rounded-br-lg">
                   <p className="text-gray-700 italic">
                     "The AI agent handles our entire onboarding process flawlessly. What used to 
                     take weeks now happens in days, and clients love the professional experience."
@@ -240,7 +240,7 @@ const AIAgentsService = () => {
             
             <div className="relative">
               <img
-                src="https://images.pexels.com/photos/3184292/pexels-photo-3184292.jpeg?auto=compress&cs=tinysrgb&w=800"
+                src="/pexels-photo-3184292.jpg"
                 alt="Marketing team collaboration"
                 className="rounded-2xl shadow-xl"
               />

@@ -92,7 +92,7 @@ const SaasService = () => {
 
       {/* Problem Statement */}
       <section className="py-20 bg-gray-50">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
             <h2 className="text-4xl font-bold text-gray-900 mb-6">
               Are You Tired of These Daily Frustrations?
@@ -123,7 +123,7 @@ const SaasService = () => {
       <section className="py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-gray-900 mb-4">
+            <h2 className="text-4xl font-bold text-theme-primary mb-4">
               Custom Software Built for Your Exact Needs
             </h2>
             <p className="text-xl text-gray-600">
@@ -133,12 +133,12 @@ const SaasService = () => {
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             {features.map((feature, index) => (
-              <div key={index} className="bg-white p-8 rounded-xl shadow-sm hover:shadow-md transition-shadow">
+              <div key={index} className="bg-gray-900 dark:bg-blue-600 p-8 rounded-xl shadow-sm hover:shadow-md transition-shadow">
                 <div className="w-16 h-16 bg-blue-100 rounded-lg flex items-center justify-center mb-6">
                   <feature.icon className="w-8 h-8 text-blue-600" />
                 </div>
-                <h3 className="text-xl font-semibold text-gray-900 mb-3">{feature.title}</h3>
-                <p className="text-gray-600">{feature.description}</p>
+                <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
+                <p className="text-white/60">{feature.description}</p>
               </div>
             ))}
           </div>
@@ -177,12 +177,12 @@ const SaasService = () => {
                 </div>
 
                 <div className="grid grid-cols-2 gap-4">
-                  <div className="bg-white p-4 rounded-lg">
-                    <div className="text-2xl font-bold text-green-600 mb-1">25 Hours</div>
+                  <div className="bg-white/90 p-4 rounded-lg border-l-4 border-blue-500">
+                    <div className="text-2xl font-bold text-blue-600 mb-1">25 Hours</div>
                     <div className="text-sm text-gray-600">Weekly Time Savings</div>
                   </div>
-                  <div className="bg-white p-4 rounded-lg">
-                    <div className="text-2xl font-bold text-green-600 mb-1">95%</div>
+                  <div className="bg-white/90 p-4 rounded-lg border-l-4 border-blue-500">
+                    <div className="text-2xl font-bold text-blue-600 mb-1">95%</div>
                     <div className="text-sm text-gray-600">Error Reduction</div>
                   </div>
                 </div>
@@ -191,7 +191,7 @@ const SaasService = () => {
             
             <div className="relative">
               <img
-                src="https://images.pexels.com/photos/2067396/pexels-photo-2067396.jpeg?auto=compress&cs=tinysrgb&w=800"
+                src="/pexels-photo-2067396.jpg"
                 alt="Bakery operations"
                 className="rounded-2xl shadow-xl"
               />
@@ -207,7 +207,7 @@ const SaasService = () => {
       {/* Benefits */}
       <section className="py-20">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-4xl font-bold text-gray-900 mb-12 text-center">
+          <h2 className="text-4xl font-bold text-theme-primary mb-12 text-center">
             What You'll Achieve with Custom SaaS
           </h2>
           
@@ -215,7 +215,7 @@ const SaasService = () => {
             {benefits.map((benefit, index) => (
               <div key={index} className="flex items-center space-x-3">
                 <CheckCircle className="w-6 h-6 text-green-500 flex-shrink-0" />
-                <span className="text-lg text-gray-700">{benefit}</span>
+                <span className="text-lg text-theme-secondary">{benefit}</span>
               </div>
             ))}
           </div>

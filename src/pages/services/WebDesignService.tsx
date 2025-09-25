@@ -50,7 +50,7 @@ const WebDesignService = () => {
   const packages = [
     {
       name: "Starter Website",
-      price: "$2,500",
+      price: "$ 500",
       description: "Perfect for new businesses",
       features: [
         "5-page responsive website",
@@ -64,7 +64,7 @@ const WebDesignService = () => {
     },
     {
       name: "Business Pro",
-      price: "$4,500",
+      price: "$ 800",
       description: "Most popular for SMBs",
       features: [
         "10-page responsive website",
@@ -120,7 +120,7 @@ const WebDesignService = () => {
 
       {/* Problem Statement */}
       <section className="py-20 bg-gray-50">
-        <div className=" mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
             <h2 className="text-4xl font-bold text-gray-900 mb-6">
               Is Your Current Website Hurting Your Business?
@@ -151,7 +151,7 @@ const WebDesignService = () => {
       <section className="py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-gray-900 mb-4">
+            <h2 className="text-4xl font-bold text-theme-primary mb-4">
               What Makes Our Websites Different
             </h2>
             <p className="text-xl text-gray-600">
@@ -159,14 +159,14 @@ const WebDesignService = () => {
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
             {features.map((feature, index) => (
-              <div key={index} className="bg-white p-8 rounded-xl shadow-sm hover:shadow-md transition-shadow">
+              <div key={index} className="bg-blue-600 p-8 rounded-xl shadow-sm hover:shadow-md transition-shadow">
                 <div className="w-16 h-16 bg-indigo-100 rounded-lg flex items-center justify-center mb-6">
                   <feature.icon className="w-8 h-8 text-indigo-600" />
                 </div>
-                <h3 className="text-xl font-semibold text-gray-900 mb-3">{feature.title}</h3>
-                <p className="text-gray-600">{feature.description}</p>
+                <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
+                <p className="text-white/60">{feature.description}</p>
               </div>
             ))}
           </div>
@@ -183,7 +183,7 @@ const WebDesignService = () => {
                 alt="Auto repair shop"
                 className="rounded-2xl shadow-xl"
               />
-              <div className="absolute -bottom-6 -left-6 bg-white p-6 rounded-lg shadow-lg">
+              <div className="absolute -bottom-6 -left-6 bg-white p-6 rounded-lg shadow-lg ">
                 <p className="text-sm text-gray-600 mb-2">Lead Generation</p>
                 <p className="text-3xl font-bold text-green-600">+300%</p>
               </div>
@@ -200,7 +200,7 @@ const WebDesignService = () => {
               </h2>
               
               <div className="space-y-6">
-                <blockquote className="bg-white border-l-4 border-indigo-600 p-6">
+                <blockquote className="bg-white/90 border-l-4 border-indigo-600 p-6">
                   <p className="text-gray-700 italic mb-3">
                     "The website they built for us generates 3x more leads than our old one. 
                     The chatbot answers customer questions 24/7, and we've captured dozens of 
@@ -210,11 +210,11 @@ const WebDesignService = () => {
                 </blockquote>
 
                 <div className="grid grid-cols-2 gap-4">
-                  <div className="text-center">
+                  <div className="bg-white/90 p-4 rounded-lg border-l-4 border-blue-500">
                     <div className="text-3xl font-bold text-indigo-600 mb-2">300%</div>
                     <p className="text-gray-600">Lead Increase</p>
                   </div>
-                  <div className="text-center">
+                  <div className="bg-white/90 p-4 rounded-lg border-l-4 border-blue-500">
                     <div className="text-3xl font-bold text-indigo-600 mb-2">50+</div>
                     <p className="text-gray-600">After-Hours Captures</p>
                   </div>
@@ -229,7 +229,7 @@ const WebDesignService = () => {
       <section className="py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-gray-900 mb-4">Website Packages</h2>
+            <h2 className="text-4xl font-bold text-theme-primary mb-4">Website Packages</h2>
             <p className="text-xl text-gray-600">Choose the perfect solution for your business size and needs</p>
           </div>
 
@@ -261,7 +261,7 @@ const WebDesignService = () => {
                     to="/contact"
                     className={`w-full text-center px-6 py-3 rounded-lg font-medium transition-colors inline-flex items-center justify-center space-x-2 ${
                       pkg.recommended 
-                        ? 'bg-blue-600 text-white hover:bg-blue-700'
+                        ? 'bg-blue-600 text-white hover:bg-blue-700 hover:text-white/90'
                         : 'bg-gray-100 text-gray-900 hover:bg-gray-200'
                     }`}
                   >

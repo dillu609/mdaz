@@ -90,17 +90,17 @@ const LogoDesignService = () => {
     {
       title: "Tech Startup",
       industry: "Technology",
-      image: "https://images.pexels.com/photos/3184339/pexels-photo-3184339.jpeg?auto=compress&cs=tinysrgb&w=400"
+      image: "/pexels-photo-3184339.jpg"
     },
     {
       title: "Restaurant Chain",
       industry: "Food & Beverage",
-      image: "https://images.pexels.com/photos/2067396/pexels-photo-2067396.jpeg?auto=compress&cs=tinysrgb&w=400"
+      image: "/pexels-photo-2067396.jpg"
     },
     {
       title: "Legal Firm",
       industry: "Professional Services",
-      image: "https://images.pexels.com/photos/3184360/pexels-photo-3184360.jpeg?auto=compress&cs=tinysrgb&w=400"
+      image: "/pexels-photo-3184360.jpg"
     }
   ];
 
@@ -159,7 +159,7 @@ const LogoDesignService = () => {
       <section className="py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-gray-900 mb-4">
+            <h2 className="text-4xl font-bold text-theme-primary mb-4">
               Professional Branding That Drives Results
             </h2>
             <p className="text-xl text-gray-600">
@@ -167,14 +167,14 @@ const LogoDesignService = () => {
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
             {features.map((feature, index) => (
-              <div key={index} className="bg-white p-8 rounded-xl shadow-sm hover:shadow-md transition-shadow">
-                <div className="w-16 h-16 bg-red-100 rounded-lg flex items-center justify-center mb-6">
-                  <feature.icon className="w-8 h-8 text-red-600" />
+              <div key={index} className="bg-orange-600 p-8 rounded-tr-3xl shadow-sm hover:shadow-md transition-shadow hover:bg-orange-700">
+                <div className="w-16 h-16 bg-white rounded-full flex items-center justify-center mb-6">
+                  <feature.icon className="w-8 h-8 text-orange-600" />
                 </div>
-                <h3 className="text-xl font-semibold text-gray-900 mb-3">{feature.title}</h3>
-                <p className="text-gray-600">{feature.description}</p>
+                <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
+                <p className="text-white/80">{feature.description}</p>
               </div>
             ))}
           </div>

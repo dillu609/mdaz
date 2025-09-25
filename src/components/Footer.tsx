@@ -16,10 +16,10 @@ const Footer = () => {
               className="flex items-center space-x-2 mb-4 cursor-pointer" 
               onClick={() => scrollToTop()}
             >
-              <div className="w-10 h-10 gradient-blue rounded-lg flex items-center justify-center shadow-theme-md hover:shadow-theme-lg transition-all duration-300 transform hover:scale-105">
-                <span className="text-white font-bold text-xl">M</span>
+              <div className="flex items-center justify-center  transition-all duration-300 transform hover:scale-105">
+                <img src="/mdaz-icon.png" alt="MDAZ Logo" className="w-11 h-11" />
               </div>
-              <span className="text-xl font-bold">MDAZ Solution</span>
+              <span className="text-xl font-bold uppercase">MDAZ Solution</span>
             </div>
             <p className="text-theme-secondary mb-6 max-w-md">
               Empowering small and medium businesses with cutting-edge technology solutions. 

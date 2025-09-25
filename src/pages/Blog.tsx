@@ -139,7 +139,7 @@ const Blog = () => {
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="flex items-center space-x-2 mb-12">
               <TrendingUp className="w-6 h-6 text-blue-600" />
-              <h2 className="text-3xl font-bold text-gray-900">Featured Articles</h2>
+              <h2 className="text-3xl font-bold text-theme-primary">Featured Articles</h2>
             </div>
             
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
@@ -268,7 +268,7 @@ const Blog = () => {
       {/* Newsletter Signup */}
       <section className="py-20 bg-gradient-to-r from-blue-600 to-indigo-700 text-white">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-4xl font-bold mb-6">
+          <h2 className="text-4xl font-bold mb-6 text-white">
             Stay Updated with Business Technology Insights
           </h2>
           <p className="text-xl mb-8 text-blue-100">

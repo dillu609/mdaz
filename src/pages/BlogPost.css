@@ -1,0 +1,16 @@
+.dark .blog-content h2,
+.dark .blog-content h3 {
+  color: #fff !important;
+  border-color: gray;
+}
+.dark .blog-content p {
+  color: #ddd !important;
+}
+.blog-content h2,
+.blog-content h3 {
+  color: #000 !important;
+  border-color: gray;
+}
+.blog-content p {
+  color: #2f2f2f !important;
+}

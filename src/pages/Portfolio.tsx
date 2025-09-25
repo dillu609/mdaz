@@ -1,10 +1,9 @@
-import React from 'react';
 import { ExternalLink, TrendingUp, Clock, DollarSign } from 'lucide-react';
 
 const Portfolio = () => {
   const caseStudies = [
     {
-      bg:'https://images.pexels.com/photos/2067396/pexels-photo-2067396.jpeg?auto=compress&cs=tinysrgb&w=800',
+      bg:'/pexels-photo-2067396.jpg',
       title: "Bakery Chain Automation System",
       client: "Johnson's Bakery Chain",
       industry: "Food & Beverage",
@@ -21,7 +20,7 @@ const Portfolio = () => {
       technologies: ["React", "Node.js", "PostgreSQL", "AWS"]
     },
     {
-      bg:'https://images.pexels.com/photos/279949/pexels-photo-279949.jpeg?auto=compress&cs=tinysrgb&w=800',
+      bg:'/pexels-photo-279949.jpg',
       title: "Auto Repair Lead Generation Website",
       client: "Chen Auto Repair",
       industry: "Automotive Services",
@@ -38,7 +37,7 @@ const Portfolio = () => {
       technologies: ["React", "Tailwind CSS", "Chatbot AI", "Google Analytics"]
     },
     {
-      bg:'https://images.pexels.com/photos/3184292/pexels-photo-3184292.jpeg?auto=compress&cs=tinysrgb&w=800',
+      bg:'/pexels-photo-3184292.jpg',
       title: "Marketing Agency Client Portal",
       client: "Rodriguez Marketing Agency",
       industry: "Marketing & Advertising",
@@ -55,7 +54,7 @@ const Portfolio = () => {
       technologies: ["AI Automation", "Document Processing", "E-signature API", "CRM Integration"]
     },
     {
-      bg:'https://images.pexels.com/photos/1216589/pexels-photo-1216589.jpeg?auto=compress&cs=tinysrgb&w=800',
+      bg:'/pexels-photo-1216589.jpg',
       title: "Construction Project Management Platform",
       client: "Park Construction LLC",
       industry: "Construction",
@@ -108,7 +107,7 @@ const Portfolio = () => {
         
           <div>
           {caseStudies.map((study, index) => (
-            <div key={index} className="scroll-offset" style={{ backgroundImage: `url(${study.bg})`, backgroundSize: 'cover', backgroundPosition: 'center' }}>
+            <div key={index} className="scroll-offset [text-shadow:1px_1px_0px_rgba(0,0,0)]" style={{ backgroundImage: `url(${study.bg})`, backgroundSize: 'cover', backgroundPosition: 'center' }}>
               <div style={{ backdropFilter: `blur(10px)`}}>
               <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
               <div  className={`grid grid-cols-1 lg:grid-cols-2 gap-12 items-center ${
@@ -129,20 +128,20 @@ const Portfolio = () => {
                     </span>
                   </div>
                   
-                  <h3 className="text-3xl font-bold text-gray-900 mb-4">{study.title}</h3>
+                  <h3 className="text-3xl font-bold text-white mb-4">{study.title}</h3>
                   
                   <div className="mb-6">
-                    <h4 className="text-lg font-semibold text-gray-900 mb-2">The Challenge:</h4>
-                    <p className="text-gray-600 leading-relaxed">{study.challenge}</p>
+                    <h4 className="text-lg font-semibold text-white/90 mb-2">The Challenge:</h4>
+                    <p className="text-white/80 leading-relaxed">{study.challenge}</p>
                   </div>
 
                   <div className="mb-6">
-                    <h4 className="text-lg font-semibold text-gray-900 mb-2">Our Solution:</h4>
-                    <p className="text-gray-600 leading-relaxed">{study.solution}</p>
+                    <h4 className="text-lg font-semibold text-white/90 mb-2">Our Solution:</h4>
+                    <p className="text-white/80 leading-relaxed">{study.solution}</p>
                   </div>
 
                   <div className="mb-6">
-                    <h4 className="text-lg font-semibold text-gray-900 mb-4">Measurable Results:</h4>
+                    <h4 className="text-lg font-semibold text-white/90 mb-4">Measurable Results:</h4>
                     <div className="grid grid-cols-2 gap-4">
                       {study.results.map((result, resultIndex) => (
                         <div key={resultIndex} className="bg-gray-50 p-4 rounded-lg">
@@ -162,7 +161,7 @@ const Portfolio = () => {
                   </blockquote>
 
                   <div className="mb-6">
-                    <h4 className="text-sm font-semibold text-gray-900 mb-2 uppercase tracking-wide">Technologies Used:</h4>
+                    <h4 className="text-sm font-semibold text-white/90 mb-2 uppercase tracking-wide [text-shadow:1px_1px_0px_rgba(0,0,0)]">Technologies Used:</h4>
                     <div className="flex flex-wrap gap-2">
                       {study.technologies.map((tech, techIndex) => (
                         <span key={techIndex} className="bg-gray-200 text-gray-700 px-3 py-1 rounded-full text-sm">

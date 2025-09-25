@@ -1,7 +1,6 @@
-import React from 'react';
 import { useParams, Link } from 'react-router-dom';
 import { Calendar, Clock, ArrowLeft, Share2, BookOpen, User, ArrowRight, Tag, Eye } from 'lucide-react';
-
+import './BlogPost.css';
 const BlogPost = () => {
   const { slug } = useParams<{ slug: string }>();
 
@@ -636,8 +635,8 @@ const BlogPost = () => {
             </div>
           </div>
           
-          <h1 className="text-4xl md:text-6xl font-bold text-gray-900 dark:text-white mb-8 leading-tight tracking-tight">
-            {post.title}
+          <h1 className="text-4xl md:text-6xl font-bold text-white dark:text-white mb-8 leading-tight tracking-tight">
+            {post.title} hello
           </h1>
           
           <p className="text-xl md:text-2xl text-gray-600 dark:text-gray-300 mb-12 leading-relaxed font-light max-w-4xl">
@@ -695,7 +694,7 @@ const BlogPost = () => {
           
           <div className="prose prose-lg prose-gray dark:prose-invert max-w-none">
             <div 
-              className="blog-content text-gray-800 dark:text-gray-200 leading-relaxed"
+              className="blog-content leading-relaxed"
               dangerouslySetInnerHTML={{ __html: post.content }}
             />
           </div>
@@ -709,9 +708,9 @@ const BlogPost = () => {
                     <span className="text-white font-bold text-xl">M</span>
                   </div>
                   <div>
-                    <h4 className="text-xl font-bold text-gray-900 dark:text-white mb-1">{post.author}</h4>
-                    <p className="text-gray-600 dark:text-gray-400 font-medium">Technology Solutions Expert</p>
-                    <p className="text-sm text-gray-500 dark:text-gray-500 mt-1">Helping businesses leverage technology for growth</p>
+                    <h4 className="text-xl font-bold   text-theme-primary mb-1">{post.author}</h4>
+                    <p className="text-gray-600 dark:text-theme-seondary font-medium">Technology Solutions Expert</p>
+                    <p className="text-sm text-gray-500 dark:text-theme-seondary mt-1">Helping businesses leverage technology for growth</p>
                   </div>
                 </div>
                 
@@ -784,7 +783,7 @@ const BlogPost = () => {
       {/* CTA Section */}
       <section className="py-20 bg-gradient-to-r from-blue-600 to-indigo-700 text-white">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-4xl font-bold mb-6">
+          <h2 className="text-4xl font-bold mb-6 text-white">
             Ready to Transform Your Business?
           </h2>
           <p className="text-xl mb-8 text-blue-100">

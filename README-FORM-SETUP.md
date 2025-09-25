@@ -35,7 +35,7 @@ This guide will help you set up the PHP script to submit contact form data to Go
    - **Who has access**: "Anyone"
 4. Click "Deploy"
 5. Copy the Web App URL (it will look like: `https://script.google.com/macros/s/SCRIPT_ID/exec`)
-
+/*https://script.google.com/macros/s/AKfycbxdKpmjxHBTSDaVXWz-C4lHXb9rOJ0fhpukbVi94K8_W7K_srL9F76rcqXpHwt9Vi_X/exec*/
 ## Step 4: Configure PHP Script
 
 1. Open `api/submit-form.php`

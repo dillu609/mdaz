@@ -1,4 +1,3 @@
-import React from 'react';
 import { CheckCircle, Award, Users, Clock } from 'lucide-react';
 
 const About = () => {
@@ -59,7 +58,7 @@ const About = () => {
             </div>
             <div className="relative">
               <img
-                src="https://images.pexels.com/photos/3184360/pexels-photo-3184360.jpeg?auto=compress&cs=tinysrgb&w=800"
+                src="/pexels-photo-3184360.jpg"
                 alt="Team collaboration"
                 className="rounded-2xl shadow-xl"
               />
@@ -75,7 +74,7 @@ const About = () => {
       {/* Mission Section */}
       <section className="py-20">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-4xl font-bold text-gray-900 mb-6">Our Mission</h2>
+          <h2 className="text-4xl font-bold text-theme-primary mb-6">Our Mission</h2>
           <p className="text-xl text-gray-600 leading-relaxed">
             We believe every small business deserves access to the same powerful technology that 
             large corporations use. Our mission is to level the playing field by providing 
@@ -113,7 +112,7 @@ const About = () => {
       <section className="py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-gray-900 mb-4">Our Proven Process</h2>
+            <h2 className="text-4xl font-bold text-theme-primary mb-4">Our Proven Process</h2>
             <p className="text-xl text-gray-600">
               A transparent, step-by-step approach that ensures your project succeeds
             </p>
@@ -131,7 +130,7 @@ const About = () => {
                 <div className="w-16 h-16 bg-blue-600  text-white  rounded-full flex items-center justify-center text-xl font-bold mx-auto mb-4">
                   {phase.step}
                 </div>
-                <h3 className="text-xl font-semibold text-gray-900 mb-3">{phase.title}</h3>
+                <h3 className="text-xl font-semibold  text-theme-primary text-white mb-3">{phase.title}</h3>
                 <p className="text-gray-600">{phase.desc}</p>
               </div>
             ))}

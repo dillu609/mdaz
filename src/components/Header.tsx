@@ -7,7 +7,7 @@ import { scrollToTop } from '../utils/smoothScroll';
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const [isScrolled, setIsScrolled] = useState(false);
+  const [isScrolled, setIsScrolled] = useState(false); 
   const [, setIsServicesOpen] = useState(false);
   const location = useLocation();
   const { isDark, toggleTheme } = useTheme();
@@ -54,18 +54,18 @@ const Header = () => {
         <div className="flex justify-between items-center py-4">
           {/* Logo */}
           <Link to="/" className="flex items-center space-x-2">
-            <div className="w-10 h-10 gradient-blue rounded-lg flex items-center justify-center shadow-theme-md hover:shadow-theme-lg transition-all duration-300 transform hover:scale-105">
-              <span className="text-white font-bold text-xl">M</span>
+            <div className="flex items-center justify-center  transition-all duration-300 transform hover:scale-105">
+              <img src="/mdaz-icon.png" alt="MDAZ Logo" className="w-11 h-11" />
             </div>
-            <span 
-              className={`text-xl font-bold transition-colors duration-300 cursor-pointer ${
+            <span style={{ lineHeight: 0.8, fontSize: '1.5rem' }}
+              className={` font-bold transition-colors duration-300 cursor-pointer pt-[5px] ${
                 isHomepage
                   ? isScrolled ? 'text-theme-primary' : 'text-white'
                   : 'text-theme-primary'
               }`}
               onClick={() => scrollToTop()}
             >
-              MDAZ Solution
+              MDAZ <br/><span className='text-sm '>SOLUTION</span>
             </span>
           </Link>
 

@@ -18,41 +18,41 @@ if ($_SERVER['REQUEST_METHOD'] !== 'POST') {
 }
 
 // Configuration - Replace with your actual Google Apps Script Web App URL
-$GOOGLE_SCRIPT_URL = 'https://script.google.com/macros/s/YOUR_SCRIPT_ID/exec';
+$GOOGLE_SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbxdKpmjxHBTSDaVXWz-C4lHXb9rOJ0fhpukbVi94K8_W7K_srL9F76rcqXpHwt9Vi_X/exec';
 
 try {
     // Get JSON input
     $input = json_decode(file_get_contents('php://input'), true);
-    
+
     // Validate required fields
     $required_fields = ['name', 'email', 'company', 'projectType', 'message'];
     $missing_fields = [];
-    
+
     foreach ($required_fields as $field) {
         if (empty($input[$field])) {
             $missing_fields[] = $field;
         }
     }
-    
+
     if (!empty($missing_fields)) {
         http_response_code(400);
         echo json_encode([
-            'success' => false, 
+            'success' => false,
             'message' => 'Missing required fields: ' . implode(', ', $missing_fields)
         ]);
         exit();
     }
-    
+
     // Validate email format
     if (!filter_var($input['email'], FILTER_VALIDATE_EMAIL)) {
         http_response_code(400);
         echo json_encode([
-            'success' => false, 
+            'success' => false,
             'message' => 'Invalid email format'
         ]);
         exit();
     }
-    
+
     // Sanitize input data
     $form_data = [
         'name' => htmlspecialchars(trim($input['name'])),
@@ -67,10 +67,10 @@ try {
         'ip_address' => $_SERVER['REMOTE_ADDR'] ?? 'Unknown',
         'user_agent' => $_SERVER['HTTP_USER_AGENT'] ?? 'Unknown'
     ];
-    
+
     // Prepare data for Google Sheets
     $post_data = http_build_query($form_data);
-    
+
     // Initialize cURL
     $ch = curl_init();
     curl_setopt($ch, CURLOPT_URL, $GOOGLE_SCRIPT_URL);
@@ -81,38 +81,38 @@ try {
     curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, false);
     curl_setopt($ch, CURLOPT_TIMEOUT, 30);
     curl_setopt($ch, CURLOPT_USERAGENT, 'MDAZ Solution Contact Form');
-    
+
     // Execute request
     $response = curl_exec($ch);
     $http_code = curl_getinfo($ch, CURLINFO_HTTP_CODE);
     $curl_error = curl_error($ch);
     curl_close($ch);
-    
+
     // Check for cURL errors
     if ($curl_error) {
         error_log("cURL Error: " . $curl_error);
         http_response_code(500);
         echo json_encode([
-            'success' => false, 
+            'success' => false,
             'message' => 'Failed to submit form. Please try again later.'
         ]);
         exit();
     }
-    
+
     // Check HTTP response code
     if ($http_code !== 200) {
         error_log("Google Sheets API Error: HTTP " . $http_code . " - " . $response);
         http_response_code(500);
         echo json_encode([
-            'success' => false, 
+            'success' => false,
             'message' => 'Failed to submit form. Please try again later.'
         ]);
         exit();
     }
-    
+
     // Log successful submission
     error_log("Form submitted successfully for: " . $form_data['email']);
-    
+
     // Return success response
     echo json_encode([
         'success' => true,
@@ -124,12 +124,12 @@ try {
             'projectType' => $form_data['projectType']
         ]
     ]);
-    
+
 } catch (Exception $e) {
     error_log("Form submission error: " . $e->getMessage());
     http_response_code(500);
     echo json_encode([
-        'success' => false, 
+        'success' => false,
         'message' => 'An unexpected error occurred. Please try again later.'
     ]);
 }

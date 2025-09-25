@@ -38,7 +38,7 @@ const Services = () => {
         "Fast loading speeds",
         "Content management system"
       ],
-      priceRange: "Starting at $2,500",
+      priceRange: "Starting at $ 500",
       href: "/services/web-design",
       color: "indigo"
     },
@@ -105,7 +105,7 @@ const Services = () => {
       {/* Hero Section */}
       <section className="py-20 bg-gradient-to-br from-blue-900 to-indigo-900 text-white">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h1 className="text-5xl font-bold mb-6">
+          <h1 className="text-5xl font-bold mb-6 ">
             Complete Technology Solutions for Growing Businesses
           </h1>
           <p className="text-xl text-blue-100 mb-8">
@@ -126,7 +126,7 @@ const Services = () => {
       <section className="py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-gray-900 mb-4">
+            <h2 className="text-4xl font-bold text-theme-primary mb-4">
               Choose the Right Solution for Your Business
             </h2>
             <p className="text-xl text-gray-600">
